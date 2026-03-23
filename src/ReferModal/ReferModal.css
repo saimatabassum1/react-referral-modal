@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
 /* OVERLAY */
 .refer-modal-overlay {
   position: fixed;
@@ -11,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 12px;
   background: rgba(0, 0, 0, 0.04);
   z-index: 999;
   overflow-y: auto;
@@ -20,10 +31,10 @@
 /* OUTER BEIGE CARD */
 .refer-modal {
   background: #fdfaf7;
-  padding: 18px 22px 20px;
+  padding: 18px 22px 18px;
   width: 640px;
   max-width: 95vw;
-  max-height: calc(100vh - 28px);
+  max-height: calc(100dvh - 24px);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
   border: 1px solid #f0e2d0;
   overflow: hidden;
@@ -34,7 +45,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .refer-header-left {
@@ -77,11 +88,11 @@
 .refer-body-card {
   background: #ffffff;
   border-radius: 22px;
-  padding: 22px 24px;
+  padding: 20px 22px;
   border: 1px solid #f2e6d7;
 }
 
-/* HERO FULL BACKGROUND IMAGE */
+/* HERO */
 .refer-hero {
   width: 100%;
   height: 220px;
@@ -89,14 +100,13 @@
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
-  /* desktop look close to your old one */
+  /* desktop look close to your old version */
   background-size: 110%;
   background-position: -90% 32%;
 }
 
-/* LEFT SIDE SOFT BEIGE GRADIENT OVERLAY */
 .refer-hero-overlay {
   position: absolute;
   inset: 0;
@@ -109,14 +119,12 @@
   );
 }
 
-/* TEXT OVER IMAGE */
 .refer-hero-content {
   position: relative;
   max-width: 340px;
   padding: 28px;
 }
 
-/* TEXT STYLES */
 .refer-logo-text {
   font-size: 11px;
   font-weight: 700;
@@ -149,20 +157,20 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0px 10px 25px rgba(255, 78, 58, 0.35);
+  box-shadow: 0 10px 25px rgba(255, 78, 58, 0.35);
 }
 
 /* HOW IT WORKS */
 .refer-how-title {
   font-size: 22px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .refer-step {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .refer-step-icon-wrapper {
@@ -194,17 +202,17 @@
   line-height: 1.35;
 }
 
-/* ====== MOBILE (<= 480px) ====== */
+/* MOBILE */
 @media (max-width: 480px) {
   .refer-modal-overlay {
-    align-items: center;
     padding: 8px 6px;
+    align-items: center;
   }
 
   .refer-modal {
     width: 100%;
     max-width: 100%;
-    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
     border-radius: 0;
     padding: 10px 8px 12px;
   }
@@ -218,7 +226,6 @@
     border-radius: 16px;
   }
 
-  /* HERO IMAGE AREA */
   .refer-hero {
     height: 180px;
     border-radius: 14px;
@@ -252,11 +259,9 @@
   }
 
   .refer-cta-btn {
-    width: auto;
     min-width: 165px;
     padding: 10px 18px;
     font-size: 13px;
-    align-self: flex-start;
     margin-top: 2px;
   }
 
