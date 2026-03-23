@@ -1,0 +1,270 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+/* OVERLAY */
+.refer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.04);
+  z-index: 999;
+}
+
+/* OUTER BEIGE CARD */
+.refer-modal {
+  background: #fdfaf7; 
+  padding: 20px 24px 26px;
+  width: 640px;
+  max-width: 95vw;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0e2d0;
+}
+
+/* HEADER */
+.refer-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.refer-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.refer-header-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background:#fcf7f3 ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refer-header-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+.refer-header-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  font-weight: bold;
+}
+
+.refer-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* MAIN WHITE BOX */
+.refer-body-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px 28px;
+  border: 1px solid #f2e6d7;
+}
+
+/* HERO FULL BACKGROUND IMAGE */
+.refer-hero {
+  width: 100%;
+  height: 260px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background-size: auto 100%; 
+  background-position: -90% 32%;
+  background-size: 110%; 
+  
+}
+
+
+/* LEFT SIDE SOFT BEIGE GRADIENT OVERLAY */
+.refer-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #f8f6f2 10%,
+    #fcfbf7 45%,
+    rgba(255, 254, 253, 0) 95%,
+    rgba(188, 171, 136, 0) 100%
+  );
+}
+
+
+/* TEXT OVER IMAGE */
+.refer-hero-content {
+  position: relative;
+  max-width: 340px;
+  padding: 34px;
+}
+
+/* TEXT STYLES */
+.refer-logo-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.refer-title {
+  font-size: 28px;
+  color: #222;
+  margin: 0 0 8px;
+}
+
+.refer-subtitle {
+  font-size: 14px;
+  color: #4b4b4b;
+  margin-bottom: 18px;
+  max-width: 270px;
+}
+
+.refer-cta-btn {
+  border: none;
+  background:#db1627;
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 10px 25px rgba(255, 78, 58, 0.35);
+}
+
+/* HOW IT WORKS */
+.refer-how-title {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.refer-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.refer-step-icon-wrapper {
+  width: 42px;
+  height: 42px;
+  background: #fdfaf8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refer-step-icon-img {
+  width: 20px;
+}
+
+.refer-step-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.refer-step-sub {
+  font-size: 13px;
+  color: #8b8b8b;
+  margin: 2px 0 0;
+}
+/* ====== MOBILE (<= 480px) — HERO TEXT + BUTTON TWEAK ====== */
+@media (max-width: 480px) {
+  /* modal overall */
+  .refer-modal-overlay {
+    /* align-items: flex-start; */
+    padding: 10px 6px;
+  }
+
+  .refer-modal {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 10px 8px 14px;
+  }
+
+  .refer-body-card {
+    padding: 14px 10px 16px;
+    border-radius: 16px;
+  }
+
+  /* HERO IMAGE AREA */
+  .refer-hero {
+    height: 210px;                 /* thoda chhota height */
+    border-radius: 14px;
+    /* apni desktop wali value se milta-julta rakhna */
+    background-position: 78% 18%;  /* image thodi right + thodi upar */
+    background-size: auto 100%;    /* zoom ke bagair full height */
+  }
+
+  /* TEXT JO IMAGE PAR HAI */
+  .refer-hero-content {
+    padding: 16px 14px;            /* kam padding, zyada space nahi lega */
+    max-width: 100%;
+  }
+
+  .refer-logo-text {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  .refer-title {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .refer-subtitle {
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 230px;              /* text image pe hi compact rahe */
+    margin-bottom: 12px;
+  }
+
+  /* BUTTON IMAGE PAR – PILL STYLE, CLEAN */
+  .refer-cta-btn {
+    width: auto;                   /* full screen nahi, pill hi rahe */
+    min-width: 180px;
+    padding: 10px 20px;
+    font-size: 13px;
+    align-self: flex-start;        /* left aligned, Figma jaisa */
+    margin-top: 4px;
+  }
+
+  /* "How it works" text thoda chhota */
+  .refer-how-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .refer-step {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .refer-step-title {
+    font-size: 14px;
+  }
+
+  .refer-step-sub {
+    font-size: 12px;
+  }
+}
